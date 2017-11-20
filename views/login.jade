@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    h1 Login
+    p please Login below
+    form(method='post',action='/users/login')
+        .form-group
+            label Username  
+            input.form-control(name='username',type='text',placeholder='Username')
+        .form-group
+            label Password  
+            input.form-control(name='password',type='password',placeholder='Enter Password')
+        input.btn.btn-default(name='submit',type='submit',value='Login')
+    hr
+    h4 or
+    a.btn.btn-primary(href='/auth/facebook')
+        span.fa.fa-facebook
+          |  Facebook 
+    &nbsp;      
+    a.btn.btn-info(href='/auth/twitter')  
+        span.fa.fa-twitter 
+          |  Twitter 
